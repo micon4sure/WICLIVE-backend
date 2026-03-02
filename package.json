@@ -1,0 +1,24 @@
+{
+  "name": "wiclive-backend",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "fastify": "^4.26.2",
+    "formidable": "^3.5.1",
+    "lodash": "^4.17.21",
+    "md5-file": "^5.0.0",
+    "mustache": "^4.2.0",
+    "xxhashjs": "^0.2.2"
+  }
+}

@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: .
+    container_name: wiclive-backend
+    restart: unless-stopped
+    ports:
+      - "3243:3243"
+    volumes:
+      - maps:/app/maps
+      - uploads:/app/uploads
+      - ./files:/app/files
+      - ./keys.json:/app/keys.json:ro
+      # Mount SSL certificates for HTTPS
+      # - /path/to/ssl/key.pem:/app/ssl/key.pem:ro
+      # - /path/to/ssl/cert.pem:/app/ssl/cert.pem:ro
+    environment:
+      - ENV_DEVELOPMENT=false
+      # - SSL_DIR=/app/ssl
+
+volumes:
+  maps:
+  uploads:

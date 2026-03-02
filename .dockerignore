@@ -1,0 +1,11 @@
+node_modules
+build
+.env
+_data.json
+_maps.json
+_patches.json
+maps
+uploads
+uploads-tmp
+files
+patches
