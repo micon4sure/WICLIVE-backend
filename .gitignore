@@ -186,4 +186,3 @@ _maps.json
 _patches.json
 publish.sh
 publish.ps1
-src/get-ssl-credentials.ts
