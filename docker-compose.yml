@@ -1,6 +1,7 @@
 services:
   backend:
     build: .
+    image: wiclive-backend
     container_name: wiclive-backend
     restart: unless-stopped
     ports:
@@ -10,6 +11,7 @@ services:
       - uploads:/app/uploads
       - ./files:/app/files
       - ./keys.json:/app/keys.json:ro
+      - ./_data.json:/app/_data.json
       # Mount SSL certificates for HTTPS
       # - /path/to/ssl/key.pem:/app/ssl/key.pem:ro
       # - /path/to/ssl/cert.pem:/app/ssl/cert.pem:ro
